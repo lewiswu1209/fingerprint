@@ -5,6 +5,8 @@ import sys
 import time
 from lib.fingerprint import *
 
+
+
 def _banner():
     print('''  
       __ _                                  _       _   
@@ -36,9 +38,9 @@ if __name__ == '__main__':
         web  = fingerprint(userAgentPath, webFingerPath)
         cms  = fingerprint(userAgentPath, cmsFingerPath)
 
-        print(u'\t[-]\t指纹库已加载%s个语言特征' % lang.fingerCount)
-        print(u'\t[-]\t指纹库已加载%s个Web容器特征' % web.fingerCount)
-        print(u'\t[-]\t指纹库已加载%s个CMS特征' % cms.fingerCount)
+        print(u'\t[-]\t指纹库已加载%d个语言特征' % lang.fingerCount)
+        print(u'\t[-]\t指纹库已加载%d个Web容器特征' % web.fingerCount)
+        print(u'\t[-]\t指纹库已加载%d个CMS特征' % cms.fingerCount)
 
         start = time.clock()
         rs_lang = lang.scan(sys.argv[1], True)

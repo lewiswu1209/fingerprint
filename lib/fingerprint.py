@@ -9,11 +9,13 @@ import cipher
 
 class fingerprint:
 
+    userAgentdb = []
+
     def __init__(self, userAgentPath, fingerprintPath):
         self.fingerprintdb = {}
-        self.userAgentdb = []
         self.fingerCount = 0
-        self.loadUserAgent(userAgentPath)
+        if not self.userAgentdb:
+            self.loadUserAgent(userAgentPath)
         self.loadFingerprint(fingerprintPath)
 
     def loadUserAgent(self, path):
