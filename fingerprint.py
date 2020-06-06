@@ -5,8 +5,6 @@ import sys
 import time
 from lib.fingerprint import *
 
-
-
 def _banner():
     print('''  
       __ _                                  _       _   

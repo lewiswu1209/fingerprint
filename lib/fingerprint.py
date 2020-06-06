@@ -37,6 +37,15 @@ class fingerprint:
 
     def check(self, body, header, fingerdb, fastMode):
         rs=[]
+
+	charset_reg =r'<meta.*charset="?([\w|-]*)"?\s*/?>'
+	patten = re.compile(charset_reg)
+	match_patten_code = patten.search(body)
+	if match_patten_code is None:
+		code = 'UTF-8'
+	else:
+		code = match_patten_code.group(1)
+
         for finger in fingerdb:
             if finger["md5"]:
                 md5 = cipher.getmd5(body)
@@ -45,7 +54,7 @@ class fingerprint:
             elif finger["pattern"]:
                 isMatch = False
                 if (finger["mode"] == 'body'):
-                    isMatch = re.search(finger['pattern'], body.decode(encoding='UTF-8'), re.IGNORECASE)
+                    isMatch = re.search(finger['pattern'], body.decode(encoding=code), re.IGNORECASE)
                 elif (finger["mode"] == 'header'):
                     isMatch = re.search(finger['pattern'], header.decode(encoding='UTF-8'), re.IGNORECASE)
                 if (not isMatch):
@@ -53,7 +62,7 @@ class fingerprint:
             elif finger['regex']:
                 isMatch = False
                 if (finger["mode"] == 'body'):
-                    isMatch = re.search(finger['regex'], body.decode(encoding='UTF-8'), re.IGNORECASE)
+                    isMatch = re.search(finger['regex'], body.decode(encoding=code), re.IGNORECASE)
                 elif (finger["mode"] == 'header'):
                     isMatch = re.search(finger['regex'], header.decode(encoding='UTF-8'), re.IGNORECASE)
                 if (not isMatch):
