@@ -76,6 +76,7 @@ class fingerprint:
         rs = []
         for path_url in self.fingerprintdb:
             test_url = url.rstrip('/') + path_url
+            print test_url
             request = urllib2.Request(test_url)
             request.add_header('User-Agent', random.choice(self.userAgentdb).rstrip('\n'))
             try:

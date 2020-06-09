@@ -9824,30 +9824,6 @@
 	"regex": ""
 },{
 	"type": "cms",
-	"tag": "Kangle虚拟主机",
-	"url": ":3312/vhost/view/default/imgs/vhost_login.png",
-	"md5": "f9e1b8ac323811d27ba15dfb29fba21b",
-	"mode": "",
-	"pattern": "",
-	"regex": ""
-},{
-	"type": "cms",
-	"tag": "opensns",
-	"url": "752dde8d5209cb3fe9fe7da14bf92b19",
-	"md5": "27998a4000f6c5b5d7074a4eeb52a0a2",
-	"mode": "",
-	"pattern": "",
-	"regex": ""
-},{
-	"type": "cms",
-	"tag": "metinfo",
-	"url": "wap/templates/met/images/listico.gif",
-	"md5": "f0560d4bac435da2cbd2729504ba3744",
-	"mode": "",
-	"pattern": "",
-	"regex": ""
-},{
-	"type": "cms",
 	"tag": "wordpress-akismet",
 	"url": "/wp-content/plugins/akismet/_inc/akismet.css",
 	"md5": "",
@@ -11617,7 +11593,7 @@
 },{
 	"type": "cms",
 	"tag": "dzzoffice",
-	"url": "static/css/common.css",
+	"url": "/static/css/common.css",
 	"md5": "",
 	"mode": "body",
 	"pattern": "dzz-attach",
@@ -11882,22 +11858,6 @@
 	"type": "cms",
 	"tag": "ecshop",
 	"url": "/widget/blog_sohu.xhtml",
-	"md5": "",
-	"mode": "body",
-	"pattern": "ecshop",
-	"regex": ""
-},{
-	"type": "cms",
-	"tag": "ecshop",
-	"url": "demo/js/check.js",
-	"md5": "",
-	"mode": "body",
-	"pattern": "ecshop",
-	"regex": ""
-},{
-	"type": "cms",
-	"tag": "ecshop",
-	"url": "themes/default_old/activity.dwt",
 	"md5": "",
 	"mode": "body",
 	"pattern": "ecshop",
