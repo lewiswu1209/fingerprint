@@ -41,13 +41,13 @@ if __name__ == '__main__':
         print(u'\t[-]\t指纹库已加载%d个CMS特征' % cms.fingerCount)
 
         start = time.clock()
-        rs_lang = lang.scan(sys.argv[1], False)
+        rs_lang = lang.scan(sys.argv[1], True)
         if (len(rs_lang)>0):
             print(u'\t[-]\t识别到:%s, 在位置:%s' % (rs_lang[0]['tag'], rs_lang[0]['url']))
-        rs_web  = web.scan(sys.argv[1], False)
+        rs_web  = web.scan(sys.argv[1], True)
         if (len(rs_web)>0):
             print(u'\t[-]\t识别到:%s, 在位置:%s' % (rs_web[0]['tag'], rs_web[0]['url']))
-        rs_cms  = cms.scan(sys.argv[1], False)
+        rs_cms  = cms.scan(sys.argv[1], True)
         if (len(rs_cms)>0):
             print(u'\t[-]\t识别到:%s, 在位置:%s' % (rs_cms[0]['tag'], rs_cms[0]['url']))
         end = time.clock()
